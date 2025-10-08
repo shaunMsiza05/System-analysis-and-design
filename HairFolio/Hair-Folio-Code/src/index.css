@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Barbershop Financial Tracker Design System
+   Professional barbershop aesthetics with modern financial dashboard elements
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Colors - Barbershop Navy & Gold Theme */
+    --background: 210 25% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Navy Blue Primary - Classic Barbershop */
+    --primary: 215 85% 20%;
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 215 85% 15%;
+    
+    /* Gold Accent - Brass/Vintage */
+    --gold: 45 85% 55%;
+    --gold-foreground: 215 25% 15%;
+    --gold-muted: 45 35% 85%;
+
+    /* Secondary - Light Navy */
+    --secondary: 215 35% 95%;
+    --secondary-foreground: 215 85% 20%;
+
+    /* Muted - Warm Grays */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent - Success Green */
+    --accent: 142 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 85% 55%;
+    --warning-foreground: 215 25% 15%;
+
+    /* UI Elements */
+    --border: 215 25% 88%;
+    --input: 215 25% 88%;
+    --ring: 215 85% 20%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 20%) 0%, hsl(215 85% 15%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 75% 45%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 45%) 0%, hsl(142 60% 35%) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(210 25% 98%) 0%, hsl(215 20% 96%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -1px hsl(215 25% 15% / 0.06);
+    --shadow-card-hover: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -2px hsl(215 25% 15% / 0.05);
+    --shadow-gold: 0 4px 14px 0 hsl(45 85% 55% / 0.25);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar - Navigation */
+    --sidebar-background: 215 85% 20%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 45 85% 55%;
+    --sidebar-primary-foreground: 215 25% 15%;
+    --sidebar-accent: 215 85% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 85% 25%;
+    --sidebar-ring: 45 85% 55%;
+  }
+
+  .dark {
+    /* Dark theme keeps similar structure but deeper tones */
+    --background: 215 25% 8%;
+    --foreground: 210 40% 95%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 45 85% 55%;
+    --primary-foreground: 215 25% 15%;
+    --primary-hover: 45 85% 50%;
+
+    --gold: 45 85% 60%;
+    --gold-foreground: 215 25% 15%;
+    --gold-muted: 45 25% 20%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 142 70% 50%;
+    --accent-foreground: 215 25% 15%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 40% 95%;
+
+    --success: 142 70% 50%;
+    --success-foreground: 215 25% 15%;
+
+    --warning: 45 85% 60%;
+    --warning-foreground: 215 25% 15%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 45 85% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 75% 45%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 60%) 0%, hsl(45 85% 50%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 50%) 0%, hsl(142 60% 40%) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(215 25% 8%) 0%, hsl(215 25% 10%) 100%);
+
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-card-hover: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-gold: 0 4px 14px 0 hsl(45 85% 55% / 0.4);
+
+    --sidebar-background: 215 25% 6%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 45 85% 55%;
+    --sidebar-primary-foreground: 215 25% 15%;
+    --sidebar-accent: 215 25% 12%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 215 25% 15%;
+    --sidebar-ring: 45 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-background);
+  }
+
+  /* Custom component styles */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
+
+@layer components {
+  /* KPI Card Component */
+  .kpi-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-card transition-smooth hover:shadow-card-hover;
+  }
+
+  .kpi-card.gold {
+    @apply gradient-gold text-gold-foreground shadow-gold;
+  }
+
+  .kpi-card.success {
+    @apply gradient-success text-success-foreground;
+  }
+
+  /* Growth indicator chips */
+  .growth-chip {
+    @apply inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .growth-chip.positive {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+
+  .growth-chip.negative {
+    @apply bg-destructive/10 text-destructive border border-destructive/20;
+  }
+
+  .growth-chip.neutral {
+    @apply bg-muted text-muted-foreground border border-border;
+  }
+}
